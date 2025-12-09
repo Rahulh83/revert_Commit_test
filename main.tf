@@ -13,6 +13,6 @@ resource "azurerm_storage_account" "SA" {
 }
 resource "azurerm_storage_container" "SC" {
     name                  = "revert-commit-test-container"
-    storage_account_name  = azurerm_storage_account.SA.name
+    storage_account_id    = azurerm_storage_account.SA.id
     container_access_type = "private"
 }
